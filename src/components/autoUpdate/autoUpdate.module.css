@@ -1,0 +1,10 @@
+.container{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 100px;
+    padding: 5px;
+}
+
+.check{
+    margin-left: 5px;
+}

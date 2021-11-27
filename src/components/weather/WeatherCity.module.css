@@ -1,0 +1,63 @@
+.container {
+    width: 480px;
+    height: 300px;
+    border-radius: 10px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    height: 30px;
+}
+
+span {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    height: 40px;
+}
+
+.city {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonDel{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    background-color:#dc3838;
+}
+
+.buttonUpdate{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    background-color: #04a40a;
+    margin-left:20px;
+}
+
+.buttonUpdate:hover{
+    background-color:#19ce21;
+}
+
+.buttonDel:hover{
+    background-color: #b61d1d;
+}
+
+.wind{
+    display: flex;
+}

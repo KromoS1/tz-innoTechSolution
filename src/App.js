@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import {useDispatch, useSelector} from "react-redux";
+import {useEffect} from "react";
+import {init} from "./bll/thunks/weaherThunk";
+import {WeatherCity} from "./components/weather/WeatherCity";
+import {SearchInput} from "./components/search/SearchInput";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const cities = useSelector(state => state.cities);
+    const dispatch = useDispatch();
+
+    const weatherCities = cities.map(city => {
+        return <WeatherCity key={city.idCity} city={city}/>
+    })
+
+    useEffect(() => {
+        dispatch(init());
+    }, [])
+
+    return (
+        <div className={"App"}>
+            <SearchInput/>
+            <div className={'Content'}>
+                {weatherCities}
+            </div>
+        </div>
+
+    );
 }
 
 export default App;
